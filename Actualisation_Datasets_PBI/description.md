@@ -1,27 +1,28 @@
-# 🔄 Flow - Actualisation séquencée des datasets Power BI
+📊 Flow - Actualisation séquencée de rapports Power BI depuis un bouton dans le rapport
 
-## 🎯 Objectif
-Permettre l'actualisation manuelle de plusieurs datasets Power BI via un **bouton intégré dans un rapport** tout en **respectant un délai de 5 minutes entre chaque actualisation** pour éviter de surcharger les appels API.
+🎯 Objectif  
+Permet d’actualiser le modèle sémantique de deux rapports Power BI hébergés dans **deux espaces de travail différents**, à la demande, via un bouton intégré dans le rapport.  
+Un délai de 5 minutes est respecté entre les deux appels à l'API Power BI afin d’éviter les limitations de fréquence (throttling) liées à l’API REST.
 
-## ⚙️ Déclencheur
-- Bouton Power BI déclencheur via **Power BI Service + Power Automate Visual**
+⚙️ Déclencheur  
+- Bouton intégré dans le rapport Power BI (Power Automate Visual)
+- Le flow est appelé par un clic utilisateur, dans le contexte de la visualisation du rapport
 
-## 🔁 Étapes principales
-1. Le flow est déclenché depuis un rapport Power BI via un bouton (visual Power Automate).
-2. Appel de l’API Power BI pour actualiser le premier dataset (`POST https://api.powerbi.com/v1.0/myorg/datasets/{datasetId}/refreshes`)
-3. Attente de 5 minutes (`Delay` action)
-4. Appel de l’API pour le 2e dataset
-5. Répéter l’attente et l’actualisation autant de fois que nécessaire.
+🔁 Étapes principales  
+1. Détection du clic sur le bouton Power Automate dans le rapport.  
+2. Envoi d’une première requête à l’API REST Power BI pour actualiser le dataset du **rapport 1** dans l’**espace de travail A** :
+3. Insertion d’un délai de 5 minutes (`Delay` = `PT5M`) afin de respecter les limites d’usage de l’API.  
+4. Envoi d’une seconde requête à l’API REST Power BI pour actualiser le dataset du **rapport 2** dans l’**espace de travail B** :
+5. (Optionnel) Ajout d’une notification de confirmation (par e-mail ou Teams) ou d’un journal de logs dans un fichier/log SharePoint.
 
-## ⏱️ Délai entre chaque dataset
-- `Delay` → 5 minutes (`PT5M`) entre chaque appel d'API
-- Permet de contourner les limites de fréquence de l’API REST Power BI
+🔐 Connexions requises  
+- Power BI  
+- (Facultatif) Office 365 Outlook ou Microsoft Teams (pour notification ou suivi)  
 
-## 🔐 Connexions utilisées
-- Power BI
+📄 Fichier JSON  
+Le fichier `flow_definition.json` contient la définition complète du flow, avec tous les appels API et délais intégrés.  
+Il peut être importé directement dans Power Automate via l’option d'import de flux.
 
-## 📄 Fichier JSON
-Le fichier `flow_definition.json` contient l’ensemble des actions et peut être importé dans Power Automate.
 
 ## 🖼️ Schéma
 Ajoute [ici](./schema_flux.png) d'un schéma illustrant le flow :
