@@ -24,4 +24,4 @@ Permettre l'actualisation manuelle de plusieurs datasets Power BI via un **bouto
 Le fichier `flow_definition.json` contient l’ensemble des actions et peut être importé dans Power Automate.
 
 ## 🖼️ Schéma
-Ajoute ici un schéma illustrant le flow :
+Ajoute [ici](./schema_flux.png) d'un schéma illustrant le flow :
