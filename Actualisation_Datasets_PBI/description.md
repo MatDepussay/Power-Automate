@@ -13,7 +13,6 @@ Un délai de 5 minutes est respecté entre les deux appels à l'API Power BI afi
 2. Envoi d’une première requête à l’API REST Power BI pour actualiser le dataset du **rapport 1** dans l’**espace de travail A** :
 3. Insertion d’un délai de 5 minutes (`Delay` = `PT5M`) afin de respecter les limites d’usage de l’API.  
 4. Envoi d’une seconde requête à l’API REST Power BI pour actualiser le dataset du **rapport 2** dans l’**espace de travail B** :
-5. (Optionnel) Ajout d’une notification de confirmation (par e-mail ou Teams) ou d’un journal de logs dans un fichier/log SharePoint.
 
 🔐 Connexions requises  
 - Power BI  
