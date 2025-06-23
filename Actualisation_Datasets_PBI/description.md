@@ -19,10 +19,9 @@ Permettre l'actualisation manuelle de plusieurs datasets Power BI via un **bouto
 
 ## 🔐 Connexions utilisées
 - Power BI
-- (Optionnel) Outlook, Teams pour notifications
 
 ## 📄 Fichier JSON
 Le fichier `flow_definition.json` contient l’ensemble des actions et peut être importé dans Power Automate.
 
 ## 🖼️ Schéma
-Ajoute ici un schéma (optionnel) illustrant le flow :
+Ajoute ici un schéma illustrant le flow :
