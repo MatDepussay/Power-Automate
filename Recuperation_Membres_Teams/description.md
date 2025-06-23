@@ -1,23 +1,35 @@
-# 👥 Flow - Récupération des membres d'une équipe Microsoft Teams
+👥 Flow - Récupération des membres d'une équipe Microsoft Teams
 
-## 🎯 Objectif
-Ce flow permet de récupérer automatiquement la liste des membres des équipes Microsoft Teams ou je suis présent et de la stocker (ou utiliser) pour un usage administratif ou analytique.
+🎯 Objectif  
+Ce flow permet de récupérer automatiquement la liste des membres de toutes les équipes Microsoft Teams où la personne qui déclenche le flux est membre. Ces données peuvent ensuite être utilisées à des fins administratives ou d'analyse. 
 
-## ⚙️ Déclencheur
-- Manuel ou planifié via un autre flow
+⚙️ Déclencheur  
+- Déclenchement manuel via Power Automate
+- Peut aussi être déclenché automatiquement via un autre flow planifié
 
-## 🔁 Étapes principales
-1. Connexion à Microsoft Teams via un connecteur.
-2. Appel de l’API Graph ou d’un connecteur natif pour récupérer les membres de l’équipe.
-3. Traitement de la réponse : filtrage, transformation si besoin.
-4. Export des données dans un fichier Excel, SharePoint, ou autre selon le besoin.
+🔁 Étapes principales  
+1. Lecture du fichier Excel de destination pour lister les lignes existantes.  
+2. Suppression de toutes les lignes afin d’éviter les doublons lors de l’actualisation des données.  
+3. Récupération de toutes les équipes Microsoft Teams dont je suis membre (`List my joined teams`).  
+4. Pour chaque équipe :
+   - Récupération de la liste des canaux (`List channels`).  
+   - Pour chaque canal :
+     - Récupération des membres (`Get channel members`).  
+     - Ajout d’une ligne dans Excel pour chaque membre avec les informations suivantes :  
+       - Nom de l’équipe  
+       - Nom du canal  
+       - Nom complet du membre  
+       - Adresse email  
+       - Rôle dans le canal (membre, propriétaire, invité, etc.)
+5. Le fichier Excel final contient donc une ligne **par personne, par canal, par équipe**, ce qui permet des analyses croisées précises.
 
-## 🔐 Connexions requises
-- Microsoft Teams
-- Excel, SharePoint ou autre pour la sortie
+🔐 Connexions requises  
+- Microsoft Teams / Office 365 Groups  
+- Excel Online (Business) ou SharePoint (selon destination)
 
-## 📄 Fichier JSON
-Le fichier `flow_definition.json` contient le flow complet, réutilisable dans Power Automate.
+📄 Fichier JSON  
+Le fichier `flow_definition.json` contient toutes les actions du flow. Il peut être importé dans Power Automate via "Importer une solution" ou "Nouveau flux > Importer un package".
+
 
 ## 🖼️ Schéma du flow
 Ajoute [ici](./Schema_flux.png) d'un schéma illustrant le flow :
