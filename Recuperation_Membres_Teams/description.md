@@ -14,10 +14,10 @@ Ce flow permet de récupérer automatiquement la liste des membres des équipes 
 
 ## 🔐 Connexions requises
 - Microsoft Teams
-- (Optionnel) Excel, SharePoint ou autre pour la sortie
+- Excel, SharePoint ou autre pour la sortie
 
 ## 📄 Fichier JSON
 Le fichier `flow_definition.json` contient le flow complet, réutilisable dans Power Automate.
 
 ## 🖼️ Schéma du flow
-*(Tu peux ajouter une image ici : `schema_flux.png`)*
+Ajoute [ici](./Schema_flux.png) d'un schéma illustrant le flow :
