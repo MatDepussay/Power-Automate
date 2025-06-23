@@ -17,7 +17,6 @@ Un délai de 5 minutes est respecté entre les deux appels à l'API Power BI afi
 
 🔐 Connexions requises  
 - Power BI  
-- (Facultatif) Office 365 Outlook ou Microsoft Teams (pour notification ou suivi)  
 
 📄 Fichier JSON  
 Le fichier `flow_definition.json` contient la définition complète du flow, avec tous les appels API et délais intégrés.  
