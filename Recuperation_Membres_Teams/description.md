@@ -49,6 +49,7 @@ Excel Online (Business) ou SharePoint (selon l'emplacement du fichier)
 Le fichier flow_definition.json contient l’ensemble des actions du flow. Il peut être importé dans Power Automate via "Importer une solution" ou "Nouveau flux > Importer un package".
 
 🖼️ Schéma du flow
-[Ancienne version](./Schema_fluxV1.png)
+
+[Ancienne version](./Schema_fluxv1.png)
 
 [Nouvelle version](./Schema_flux.png)
