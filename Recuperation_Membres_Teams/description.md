@@ -45,8 +45,22 @@ Microsoft Teams / Office 365 Groups
 
 Excel Online (Business) ou SharePoint (selon l'emplacement du fichier)
 
+📄 Fichier OSTS — Script de gestion des doublons
+Le fichier [Suppression_doublons_excel.osts](./Suppression doublons execels.osts) est un script Office Script permettant de gérer les doublons dans le fichier Excel généré par le flow.
+
+🔍 Fonctionnement :
+Ce script identifie les lignes ayant les mêmes valeurs pour les colonnes Équipe, Canal, et Membre.
+Parmi ces doublons, il conserve uniquement la ligne avec la date la plus ancienne (colonne Date).
+
+📁 Emplacement attendu :
+Le flow est configuré pour exécuter ce script automatiquement depuis votre OneDrive, à l’emplacement suivant :
+OneDrive / Mes fichiers / Mes documents / Scripts Office.
+
+💡 Remarque :
+Pour que le script fonctionne correctement, assurez-vous qu’il soit bien nommé et stocké au bon endroit dans votre OneDrive personnel.
+
 📄 Fichier JSON
-Le fichier flow_definition.json contient l’ensemble des actions du flow. Il peut être importé dans Power Automate via "Importer une solution" ou "Nouveau flux > Importer un package".
+Le fichier [definition.json](./definition.json) contient l’ensemble des actions du flow. Il peut être importé dans Power Automate via "Importer une solution" ou "Nouveau flux > Importer un package".
 
 🖼️ Schéma du flow
 
