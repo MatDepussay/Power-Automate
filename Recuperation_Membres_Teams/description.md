@@ -46,7 +46,7 @@ Microsoft Teams / Office 365 Groups
 Excel Online (Business) ou SharePoint (selon l'emplacement du fichier)
 
 📄 Fichier OSTS — Script de gestion des doublons
-Le fichier [Suppression_doublons_excel.osts](./Suppression doublons execels.osts) est un script Office Script permettant de gérer les doublons dans le fichier Excel généré par le flow.
+Le fichier [Suppression_doublons_excel.osts](./Suppression%20doublons%20execels.osts) est un script Office Script permettant de gérer les doublons dans le fichier Excel généré par le flow.
 
 🔍 Fonctionnement :
 Ce script identifie les lignes ayant les mêmes valeurs pour les colonnes Équipe, Canal, et Membre.
